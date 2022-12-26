@@ -31,7 +31,7 @@ Refer to file **postman/MYOS-ArifFikri.postman_collection.json** to use with Pos
 
 Import collection into postman
 
-User 2 endpoints available
+Use 2 endpoints available
 
 - GET /product
 - POST /checkout
