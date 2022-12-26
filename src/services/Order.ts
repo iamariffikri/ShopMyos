@@ -1,5 +1,6 @@
-import Database from '../providers/Database'
+import { DatabaseType } from '../providers/Database'
 import Order from '../models/Order'
+import Locals from '../providers/Locals'
 
 export interface OrderServiceType {
   queryOrder(query: string): Promise<void>
@@ -7,10 +8,10 @@ export interface OrderServiceType {
 }
 
 class OrderService implements OrderServiceType {
-  private database: Database
-  private DB_NAME = 'myos-ecommerce'
+  private database: DatabaseType
+  private DB_NAME = Locals.config().dbName
 
-  constructor(database: Database) {
+  constructor(database: DatabaseType) {
     this.database = database
   }
 

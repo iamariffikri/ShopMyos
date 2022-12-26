@@ -1,8 +1,9 @@
-import Database from '../providers/Database'
+import { DatabaseType } from '../providers/Database'
 import Product from '../models/Product'
 import { CartOrderType } from '../interfaces/Order'
 import CartOrder from '../models/CartOrder'
 import Order from '../models/Order'
+import Locals from '../providers/Locals'
 
 export interface CartServiceType {
   queryCartOrder(query: string): Promise<number>
@@ -10,10 +11,10 @@ export interface CartServiceType {
 }
 
 class CartService implements CartServiceType {
-  private database: Database
-  private DB_NAME = 'myos-ecommerce'
+  private database: DatabaseType
+  private DB_NAME = Locals.config().dbName
 
-  constructor(database: Database) {
+  constructor(database: DatabaseType) {
     this.database = database
   }
 

@@ -1,4 +1,4 @@
-import Database from '../providers/Database'
+import { DatabaseType } from '../providers/Database'
 import Product from '../models/Product'
 import { OrderType } from '../interfaces/Order'
 import Locals from '../providers/Locals'
@@ -14,10 +14,10 @@ export interface ProductServiceType {
 }
 
 class ProductService implements ProductServiceType {
-  private database: Database
+  private database: DatabaseType
   private DB_NAME = Locals.config().dbName
 
-  constructor(database: Database) {
+  constructor(database: DatabaseType) {
     this.database = database
   }
 

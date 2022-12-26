@@ -12,6 +12,6 @@
     "./node_modules/@types/express/index.d.ts",
     "./node_modules/@types/dotenv/index.d.ts"
   ],
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "test/**/*.spec.ts"],
   "exclude": ["node_modules"]
 }

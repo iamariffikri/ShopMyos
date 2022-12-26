@@ -1,7 +1,13 @@
 import * as mysql from 'mysql'
 import Locals from './Locals'
 
-class Database {
+export interface DatabaseType {
+  getConnection(database: string)
+  connect(database: string)
+  dropConnection()
+}
+
+class Database implements DatabaseType {
   host: string
   user: string
   password: string
