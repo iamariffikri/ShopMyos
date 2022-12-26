@@ -1,6 +1,7 @@
 import Database from '../providers/Database'
 import Product from '../models/Product'
 import { OrderType } from '../interfaces/Order'
+import Locals from '../providers/Locals'
 
 export interface ProductServiceType {
   checkQuantity(productIds: number[]): Promise<Product[]>
@@ -14,7 +15,7 @@ export interface ProductServiceType {
 
 class ProductService implements ProductServiceType {
   private database: Database
-  private DB_NAME = 'myos-ecommerce'
+  private DB_NAME = Locals.config().dbName
 
   constructor(database: Database) {
     this.database = database
