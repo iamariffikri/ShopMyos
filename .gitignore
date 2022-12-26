@@ -47,9 +47,6 @@ node_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
-
 # typescript build directory
 build/
 
@@ -58,7 +55,6 @@ dist/
 
 # Serverless
 .serverless
-.env
 tmp
 .coveralls.yml
 
@@ -103,3 +99,5 @@ node_modules
 config/*.yaml
 
 docs/*.html
+
+dbcert
