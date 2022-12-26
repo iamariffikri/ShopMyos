@@ -28,7 +28,9 @@ npm test
 ## Postman collection
 
 Refer to file **postman/MYOS-ArifFikri.postman_collection.json** to use with Postman for testing
-Import in postman
+
+Import collection into postman
+
 User 2 endpoints available
 
 - GET /product
