@@ -6,22 +6,30 @@
 
 In order to address this challenge, I have used **Node.js** with **Typescript** as the primary programming language and **npm** as the project build tool. (Dependency management and etc.)
 
-Node.js: 10.13.0
+Node.js: 12.19.0
 
-NPM: 6.7.0
+NPM: 6.14.8
 
 ## How to run the project
 
 Go to the project directory.
 
-#### ./bin/run
-
-#### It should take care of install dependency using npm
+```bash
+npm install
+npm run start
+```
 
 ### How to run unit tests
 
-#### ./bin/test
+```bash
+npm test
+```
 
-#### It should take care of install dependency using npm
+## Postman collection
 
-#
+Refer to file **postman/MYOS-ArifFikri.postman_collection.json** to use with Postman for testing
+Import in postman
+User 2 endpoints available
+
+- GET /product
+- POST /checkout
